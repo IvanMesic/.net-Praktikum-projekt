@@ -1,0 +1,44 @@
+﻿<Window x:Class="MojZabavniWpfApp.PlayerInformation"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MojZabavniWpfApp"
+        mc:Ignorable="d"
+        Title="PlayerInformation" Height="450" Width="249">
+    <Grid>
+        <Label x:Name="lbName" Content="Label" HorizontalAlignment="Center" Margin="0,76,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lbPosition" Content="Label" HorizontalAlignment="Center" Margin="0,118,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lbNumber" Content="Label" HorizontalAlignment="Center" Margin="0,157,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lbIsCaptain" Content="Label" HorizontalAlignment="Center" Margin="0,198,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lbGoals" Content="Label" HorizontalAlignment="Center" Margin="0,251,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lbYellowCards" Content="Label" HorizontalAlignment="Center" Margin="0,296,0,0" VerticalAlignment="Top"/>
+        <Label Content="Name" HorizontalAlignment="Center" Margin="0,45,0,0" VerticalAlignment="Top"/>
+        <Label Content="Position" HorizontalAlignment="Center" Margin="0,100,0,0" VerticalAlignment="Top"/>
+        <Label Content="Number" HorizontalAlignment="Center" Margin="0,139,0,0" VerticalAlignment="Top"/>
+        <Label Content="Is Captain?" HorizontalAlignment="Center" Margin="0,180,0,0" VerticalAlignment="Top"/>
+        <Label Content="Goals" HorizontalAlignment="Center" Margin="0,233,0,0" VerticalAlignment="Top"/>
+        <Label Content="Yellow Cards" HorizontalAlignment="Center" Margin="0,277,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="Window.Loaded">
+            <BeginStoryboard>
+                <Storyboard>
+                    <DoubleAnimation Storyboard.TargetProperty="RenderTransform.(TranslateTransform.Y)"
+                                         From="-50" To="0" Duration="0:0:1">
+                        <DoubleAnimation.EasingFunction>
+                            <ElasticEase EasingMode="EaseOut" Oscillations="2" Springiness="5" />
+                        </DoubleAnimation.EasingFunction>
+                    </DoubleAnimation>
+
+                    <ColorAnimation Storyboard.TargetName="lbName" Storyboard.TargetProperty="(Label.Foreground).(SolidColorBrush.Color)"
+                                       To="LightGreen" Duration="0:0:1" />
+
+
+
+                </Storyboard>
+            </BeginStoryboard>
+        </EventTrigger>
+    </Window.Triggers>
+</Window>

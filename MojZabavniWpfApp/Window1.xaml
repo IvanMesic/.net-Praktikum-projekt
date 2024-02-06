@@ -1,0 +1,123 @@
+﻿<Window x:Class="MojZabavniWpfApp.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MojZabavniWpfApp"
+        mc:Ignorable="d"
+        Title="Window1" Height="450" Width="339" Loaded="Window_Loaded">
+    <Window.Resources>
+        <!-- Define a DoubleAnimation to animate the opacity property -->
+        <DoubleAnimation x:Key="FadeInAnimation" From="0" To="1" Duration="0:0:1" />
+    </Window.Resources>
+    <Grid Margin="0,0,10,0">
+        <Grid.Triggers>
+            <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+                <BeginStoryboard>
+                    <Storyboard>
+                        <!-- Add fade-in animations for each label on the left -->
+                        <DoubleAnimation Storyboard.TargetProperty="Opacity"
+                                         Storyboard.TargetName="LblCountry"
+                                         Duration="0:0:1"
+                                         To="1" />
+                        <DoubleAnimation Storyboard.TargetProperty="Opacity"
+                                         Storyboard.TargetName="LblCode"
+                                         Duration="0:0:1"
+                                         To="1" />
+                        <DoubleAnimation Storyboard.TargetProperty="Opacity"
+                                         Storyboard.TargetName="LblWins"
+                                         Duration="0:0:1"
+                                         To="1" />
+                        <DoubleAnimation Storyboard.TargetProperty="Opacity"
+                                         Storyboard.TargetName="LblDraws"
+                                         Duration="0:0:1"
+                                         To="1" />
+                        <DoubleAnimation Storyboard.TargetProperty="Opacity"
+                                         Storyboard.TargetName="LblLosses"
+                                         Duration="0:0:1"
+                                         To="1" />
+                        <DoubleAnimation Storyboard.TargetProperty="Opacity"
+                                         Storyboard.TargetName="LblGoals"
+                                         Duration="0:0:1"
+                                         To="1" />
+                        <DoubleAnimation Storyboard.TargetProperty="Opacity"
+                                         Storyboard.TargetName="LblTaken"
+                                         Duration="0:0:1"
+                                         To="1" />
+                        <DoubleAnimation Storyboard.TargetProperty="Opacity"
+                                         Storyboard.TargetName="LblDiff"
+                                         Duration="0:0:1"
+                                         To="1" />
+                        <DoubleAnimation Storyboard.TargetProperty="Opacity"
+                                         Storyboard.TargetName="LblGamesPlayed"
+                                         Duration="0:0:1"
+                                         To="1" />
+
+                        <!-- Add fade-in animations for each label on the right -->
+                        <DoubleAnimation Storyboard.TargetProperty="Opacity"
+                                         Storyboard.TargetName="Country"
+                                         Duration="0:0:1"
+                                         To="1" />
+                        <DoubleAnimation Storyboard.TargetProperty="Opacity"
+                                         Storyboard.TargetName="Code"
+                                         Duration="0:0:1"
+                                         To="1" />
+                        <DoubleAnimation Storyboard.TargetProperty="Opacity"
+                                         Storyboard.TargetName="Wins"
+                                         Duration="0:0:1"
+                                         To="1" />
+                        <DoubleAnimation Storyboard.TargetProperty="Opacity"
+                                         Storyboard.TargetName="Draws"
+                                         Duration="0:0:1"
+                                         To="1" />
+                        <DoubleAnimation Storyboard.TargetProperty="Opacity"
+                                         Storyboard.TargetName="Losses"
+                                         Duration="0:0:1"
+                                         To="1" />
+                        <DoubleAnimation Storyboard.TargetProperty="Opacity"
+                                         Storyboard.TargetName="Goals"
+                                         Duration="0:0:1"
+                                         To="1" />
+                        <DoubleAnimation Storyboard.TargetProperty="Opacity"
+                                         Storyboard.TargetName="Taken"
+                                         Duration="0:0:1"
+                                         To="1" />
+                        <DoubleAnimation Storyboard.TargetProperty="Opacity"
+                                         Storyboard.TargetName="Diff"
+                                         Duration="0:0:1"
+                                         To="1" />
+                        <DoubleAnimation Storyboard.TargetProperty="Opacity"
+                                         Storyboard.TargetName="GamesPlayed"
+                                         Duration="0:0:1"
+                                         To="1" />
+                    </Storyboard>
+                </BeginStoryboard>
+            </EventTrigger>
+        </Grid.Triggers>
+
+        <!-- Labels on the left -->
+        <Label Content="Country" x:Name="LblCountry" HorizontalAlignment="Left" Margin="12,24,0,0" VerticalAlignment="Top" Opacity="0"/>
+        <Label Content="Code" x:Name="LblCode" HorizontalAlignment="Left" Margin="12,74,0,0" VerticalAlignment="Top" Opacity="0"/>
+        <Label Content="Wins" x:Name="LblWins" HorizontalAlignment="Left" Margin="12,120,0,0" VerticalAlignment="Top" Opacity="0"/>
+        <Label Content="Draws" x:Name="LblDraws" HorizontalAlignment="Left" Margin="12,167,0,0" VerticalAlignment="Top" Opacity="0"/>
+        <Label Content="Losses" x:Name="LblLosses" HorizontalAlignment="Left" Margin="12,217,0,0" VerticalAlignment="Top" Opacity="0"/>
+        <Label Content="Goals Achieved" x:Name="LblGoals" HorizontalAlignment="Left" Margin="12,277,0,0" VerticalAlignment="Top" Opacity="0"/>
+        <Label Content="Goals Taken" x:Name="LblTaken" HorizontalAlignment="Left" Margin="12,316,0,0" VerticalAlignment="Top" Opacity="0"/>
+        <Label Content="Difference" x:Name="LblDiff" HorizontalAlignment="Left" Margin="12,347,0,0" VerticalAlignment="Top" Opacity="0"/>
+        <Label Content="Games" x:Name="LblGamesPlayed" HorizontalAlignment="Left" Margin="12,248,0,0" VerticalAlignment="Top" Opacity="0"/>
+
+        <!-- Labels on the right -->
+        <Label x:Name="Country" Content="Label" HorizontalAlignment="Left" Margin="214,24,0,0" VerticalAlignment="Top" Opacity="0"/>
+        <Label x:Name="Code" Content="Label" HorizontalAlignment="Left" Margin="214,74,0,0" VerticalAlignment="Top" Opacity="0"/>
+        <Label Content="Wins" HorizontalAlignment="Left" Margin="85,120,0,0" VerticalAlignment="Top" Opacity="0"/>
+        <Label x:Name="Wins" Content="Label" HorizontalAlignment="Left" Margin="214,120,0,0" VerticalAlignment="Top" Opacity="0"/>
+        <Label x:Name="Draws" Content="Label" HorizontalAlignment="Left" Margin="214,167,0,0" VerticalAlignment="Top" Opacity="0"/>
+        <Label x:Name="Losses" Content="Label" HorizontalAlignment="Left" Margin="214,217,0,0" VerticalAlignment="Top" Opacity="0"/>
+        <Label x:Name="Goals" Content="Label" HorizontalAlignment="Left" Margin="214,277,0,0" VerticalAlignment="Top" Opacity="0"/>
+        <Label x:Name="Taken" Content="Label" HorizontalAlignment="Left" Margin="214,316,0,0" VerticalAlignment="Top" Opacity="0"/>
+        <Label x:Name="Diff" Content="Label" HorizontalAlignment="Left" Margin="214,347,0,0" VerticalAlignment="Top" Opacity="0"/>
+        <Label Content="Games" HorizontalAlignment="Left" Margin="82,248,0,0" VerticalAlignment="Top" Opacity="0"/>
+        <Label x:Name="GamesPlayed" Content="Label" HorizontalAlignment="Left" Margin="214,243,0,0" VerticalAlignment="Top" Opacity="0"/>
+
+    </Grid>
+</Window>

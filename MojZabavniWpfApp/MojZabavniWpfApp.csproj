@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="stockImage.jpeg" />
+    <None Remove="wallpaperflare.com_wallpaper.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MojZabavniDal\MojZabavniDal.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="stockImage.jpeg" />
+    <Resource Include="wallpaperflare.com_wallpaper.jpg" />
+  </ItemGroup>
+
+</Project>
